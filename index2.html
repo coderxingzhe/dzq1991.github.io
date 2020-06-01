@@ -13,8 +13,8 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
     <h2> 这里是第二种方式 </h2>
     <br/>
     <br/>
-    <button type="button" onclick="secondClick()">Click Me!</button>
-    <button type="button" onclick="thirdClick()">ThirdClick!</button>
+    <button type="button" onclick="jsToOcFunction1()">Click Me!</button>
+    <button type="button" onclick="jsToOcFunction2()">ThirdClick!</button>
     <br/>
     <br/>
 </body>
@@ -24,18 +24,18 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 	
 <script type="text/javascript">
 
-        function secondClick() {
-<!--                share('分享的标题','分享的内容','图片地址');-->
-
-            window.webkit.messageHandlers.removeNavigationBar.postMessage('remove navigationBar');
-
+        function secondClick() 
+        {
+            window.webkit.messageHandlers.jsToOcNoPrams.postMessage({});
         }
 
-        function thirdClick(){
-            window.webkit.messageHandlers.AddNavigationBar.postMessage('add navigationBar');
+        function thirdClick()
+        {
+            window.webkit.messageHandlers.jsToOcWithPrams.postMessage({"params":"我是参数"});
         }
 
-        function showAlert(message){
+        function showAlert(message)
+        {
             alert(message);
         }
 </script>
