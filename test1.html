@@ -35,13 +35,13 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
     function jsToOcFunction1()  //jsToOcFunction1
     {
        alert("enter jsToOcFunction1");
-       window.webkit.messageHandlers.eventOne.postMessage({});
+       window.webkit.messageHandlers.jsToOcNoPrams.postMessage({});
     }
     
     function jsToOcFunction2()
     {
 	alert("enter jsToOcFunction2");
-        window.webkit.messageHandlers.eventTwo.postMessage({"params":"我是参数"});
+        window.webkit.messageHandlers.jsToOcNoPrams.postMessage({"params":"我是参数"});
     }
     
     function showAlert()
