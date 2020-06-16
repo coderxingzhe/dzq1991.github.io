@@ -13,7 +13,7 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
     <h2> 这里是第二种方式 </h2>
     <br/>
     <br/>
-    <p style="text-align:center"> <button id="btn1" type = "button" onclick = "back2game_Func()" > JS调用OC：不参bc  </button> </p>
+    <p style="text-align:center"> <button id="btn1" type = "button" onclick = "back2gameFunc()" > JS调用OC：不参bc2  </button> </p>
     <p style="text-align:center"> <button id="btn2" type = "button" onclick = "jsToOcFunction2()"> JS调用OC：带参数  </button> </p>
     <p style="text-align:center"> <button id="btn3" type = "button" onclick = "showAlert()" > oc捕获到html的弹出框  </button> </p>
     <button type="button" onclick = "back2game_Func()" > back2game方法 </button>
@@ -29,7 +29,7 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 <script type="text/javascript">
 	
 
-        function back2game_Func() 
+        function back2gameFunc() 
         {
             window.webkit.messageHandlers.back2game.postMessage({});
         }
