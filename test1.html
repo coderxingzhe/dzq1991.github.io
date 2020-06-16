@@ -31,12 +31,14 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 
         function back2game() 
         {
+		
+	alert("进入back2game");
             window.webkit.messageHandlers.jsToOcNoPrams2.postMessage({});
         }
 	
 	function jsToOcFunction1()
         {
-        
+            alert("进入jsToOcFunction1");
             window.webkit.messageHandlers.jsToOcNoPrams.postMessage({});
         }
 
