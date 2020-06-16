@@ -34,12 +34,13 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 <script type="text/javascript">
     function jsToOcFunction1()  //jsToOcFunction1
     {
-        
+       alert("enter jsToOcFunction1");
        window.webkit.messageHandlers.jsToOcNoPrams.postMessage({});
     }
     
     function jsToOcFunction2()
     {
+	alert("enter jsToOcFunction2");
         window.webkit.messageHandlers.jsToOcWithPrams.postMessage({"params":"我是参数"});
     }
     
@@ -51,11 +52,13 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 
     function back2game1() 
     {
+	 alert("enter back2game1");
 	 window.webkit.messageHandlers.jsToOcNoPrams2.postMessage({});
     }
 	
     function back2game2() 
     {
+	 alert("enter back2game2");
 	 window.webkit.messageHandlers.jsToOcNoPrams2.postMessage({});
     }
 	
@@ -63,7 +66,9 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 
     function updateUserInfo()
     {
-         window.webkit.messageHandlers.updateUserInfos.postMessage({"params":"我是参数"});
+	    
+	 alert("enter updateUserInfo");
+         window.webkit.messageHandlers.jsToOcWithPrams.postMessage({"params":"我是参数"});
     }
 
     
