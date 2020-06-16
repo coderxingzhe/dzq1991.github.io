@@ -17,12 +17,18 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
     <button type="button" onclick="updateUserInfo_Func()">updateUserInfo方法</button>
     <br/>
     <br/>
+    <p style="text-align:center"> <button id="btn1" type = "button" onclick = "jsToOcFunction1()" > JS调用OC：不带参数  </button> </p>
+    
+    <p style="text-align:center"> <button id="btn2" type = "button" onclick = "jsToOcFunction2()"> JS调用OC：带参数  </button> </p>
+    
+    <p style="text-align:center"> <button id="btn3" type = "button" onclick = "showAlert()" > oc捕获到html的弹出框  </button> </p>
 </body>
 
 <script  src="jquery.js"></script>
 <script  src="mobile-detect.js"></script>
 	
 <script type="text/javascript">
+	
 
         function back2game_Func() 
         {
@@ -34,10 +40,21 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
             window.webkit.messageHandlers.updateUserInfo.postMessage({"params":"我是参数"});
         }
 
-        function showAlert(message)
-        {
-            alert(message);
-        }
+    function jsToOcFunction1()
+    {
+        
+       window.webkit.messageHandlers.jsToOcNoPrams.postMessage({});
+    }
+    
+    function jsToOcFunction2()
+    {
+        window.webkit.messageHandlers.jsToOcWithPrams.postMessage({"params":"我是参数"});
+    }
+    
+    function showAlert()
+    {
+        alert("被OC截获到了");
+    }
 </script>
 	
 </html>
