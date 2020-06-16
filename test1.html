@@ -13,11 +13,11 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
     <h2> 这里是第二种方式 </h2>
     <br/>
     <br/>
-    //<p style="text-align:center"> <button id="btn1" type = "button" onclick = "back2gameFunc()" > back2gameFunc方法  </button> </p>
-    <p style="text-align:center"> <button id="btn2" type = "button" onclick = "back2gameFunc2()"> JS调用OC：带参数  </button> </p>
+    //<p style="text-align:center"> <button id="btn1" type = "button" onclick = "back2game()" > back2gameFunc方法  </button> </p>
+    <p style="text-align:center"> <button id="btn2" type = "button" onclick = "updateUserInfo()"> updateUserInfo方法  </button> </p>
     <p style="text-align:center"> <button id="btn3" type = "button" onclick = "showAlert()" > oc捕获到html的弹出框  </button> </p>
-    <button type="button" onclick = "back2game_Func()" > back2game方法 </button>
-    <button type="button" onclick = "updateUserInfo_Func()" > updateUserInfo方法 </button>
+    <button type="button" onclick = "back2gameFunc()" > back2game方法 </button>
+    <button type="button" onclick = "updateUserInfoFunc()" > updateUserInfo方法 </button>
     <br/>
     <br/>
     
@@ -29,14 +29,14 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 <script type="text/javascript">
 	
 
-        function back2gameFunc() 
+        function back2game() 
         {
             window.webkit.messageHandlers.back2games.postMessage({});
         }
 
-        function updateUserInfo_Func()
+        function updateUserInfo()
         {
-            window.webkit.messageHandlers.updateUserInfo.postMessage({"params":"我是参数"});
+            window.webkit.messageHandlers.updateUserInfos.postMessage({"params":"我是参数"});
         }
 
         function jsToOcFunction1()
@@ -45,10 +45,10 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
             window.webkit.messageHandlers.jsToOcNoPrams.postMessage({});
        }
     
-        function back2gameFunc()
-        {
-          window.webkit.messageHandlers.jsToOcWithPrams.postMessage({"params":"我是参数"});
-        }
+//         function back2gameFunc()
+//         {
+//           window.webkit.messageHandlers.jsToOcWithPrams.postMessage({"params":"我是参数"});
+//         }
     
     function showAlert()
     {
