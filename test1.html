@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport"
 content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
-<title>JS和oc交互</title>
+<title>JS和oc的交互</title>
 </head>
 
 
@@ -13,8 +13,8 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
     <h2> 这里是第二种方式 </h2>
     <br/>
     <br/>
-    <button type="button" onclick="jsToOcFunction1()">Click Me!</button>
-    <button type="button" onclick="jsToOcFunction2()">ThirdClick!</button>
+    <button type="button" onclick="jsToOcFunction1()">back2game_Func</button>
+    <button type="button" onclick="jsToOcFunction2()">updateUserInfo_Func</button>
     <br/>
     <br/>
 </body>
@@ -24,12 +24,12 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 	
 <script type="text/javascript">
 
-        function jsToOcFunction1() 
+        function back2game_Func() 
         {
             window.webkit.messageHandlers.back2game.postMessage({});
         }
 
-        function jsToOcFunction2()
+        function updateUserInfo_Func()
         {
             window.webkit.messageHandlers.updateUserInfo.postMessage({"params":"我是参数"});
         }
