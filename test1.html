@@ -14,7 +14,7 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
     <br/>
     <br/>
 	
-    <p style="text-align:center"> <button id="btn4" type = "button" onclick = "jsToOcFunction1()" > JS调用OC：不带参数  </button> </p>
+    <p style="text-align:center"> <button id="btn4" type = "button" onclick = "back2game1()" > JS调用OC：不带参数  </button> </p>
     <p style="text-align:center"> <button id="btn5" type = "button" onclick = "jsToOcFunction2()"> JS调用OC：带参数  </button> </p>
     <p style="text-align:center"> <button id="btn3" type = "button" onclick = "showAlert()" > oc捕获到html的弹出框  </button> </p>
 	
@@ -32,7 +32,7 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 <script  src="mobile-detect.js"></script>
 	
 <script type="text/javascript">
-    function back2game1()  //jsToOcFunction1
+    function jsToOcFunction1()  //jsToOcFunction1
     {
         
        window.webkit.messageHandlers.jsToOcNoPrams.postMessage({});
