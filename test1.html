@@ -10,7 +10,7 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 
 
 <body bgcolor="green" >
-    <h2> count 7 </h2>
+    <h2> count 8 </h2>
     <br/>
     <br/>
 	
@@ -35,13 +35,13 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
     function jsToOcFunction1()  //jsToOcFunction1
     {
        alert("enter jsToOcFunction1");
-       window.webkit.messageHandlers.jsToOcNoPrams.postMessage({});
+       window.webkit.messageHandlers.event1.postMessage({});
     }
     
     function jsToOcFunction2()
     {
 	alert("enter jsToOcFunction2");
-        window.webkit.messageHandlers.jsToOcWithPrams.postMessage({"params":"我是参数"});
+        window.webkit.messageHandlers.event2.postMessage({"params":"我是参数"});
     }
     
     function showAlert()
@@ -53,13 +53,13 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
     function back2game1() 
     {
 	 alert("enter back2game1");
-	 window.webkit.messageHandlers.jsToOcNoPrams2.postMessage({});
+	 window.webkit.messageHandlers.event3.postMessage({});
     }
 	
     function back2game2() 
     {
 	 alert("enter back2game2");
-	 window.webkit.messageHandlers.jsToOcNoPrams2.postMessage({});
+	 window.webkit.messageHandlers.event4.postMessage({});
     }
 	
 	
