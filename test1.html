@@ -10,9 +10,14 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 
 
 <body bgcolor="green" >
-    <h2> count4 </h2>
+    <h2> count 5 </h2>
     <br/>
     <br/>
+	
+    <p style="text-align:center"> <button id="btn4" type = "button" onclick = "jsToOcFunction1()" > JS调用OC：不带参数  </button> </p>
+    <p style="text-align:center"> <button id="btn5" type = "button" onclick = "jsToOcFunction2()"> JS调用OC：带参数  </button> </p>
+    <p style="text-align:center"> <button id="btn3" type = "button" onclick = "showAlert()" > oc捕获到html的弹出框  </button> </p>
+	
     <p style="text-align:center"> <button id="btn1" type = "button" onclick = "back2game()" > 方法1  </button> </p>
     <p style="text-align:center"> <button id="btn2" type = "button" onclick = "back2game()"> 方法2  </button> </p>
     <p style="text-align:center"> <button id="btn3" type = "button" onclick = "showAlert()" > oc捕获到html的弹出框  </button> </p>
@@ -27,6 +32,21 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 <script  src="mobile-detect.js"></script>
 	
 <script type="text/javascript">
+    function jsToOcFunction1()
+    {
+        
+       window.webkit.messageHandlers.jsToOcNoPrams.postMessage({});
+    }
+    
+    function jsToOcFunction2()
+    {
+        window.webkit.messageHandlers.jsToOcWithPrams.postMessage({"params":"我是参数"});
+    }
+    
+    function showAlert()
+    {
+        alert("被OC截获到了");
+    }
 	
 
         function back2game() 
@@ -36,11 +56,7 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
             window.webkit.messageHandlers.jsToOcNoPrams2.postMessage({});
         }
 	
-	function jsToOcFunction1()
-        {
-            alert("进入jsToOcFunction1");
-            window.webkit.messageHandlers.jsToOcNoPrams.postMessage({});
-        }
+	
 
         function updateUserInfo()
         {
@@ -54,10 +70,7 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 //           window.webkit.messageHandlers.jsToOcWithPrams.postMessage({"params":"我是参数"});
 //         }
     
-    function showAlert()
-    {
-        alert("被OC截获到了");
-    }
+ 
 </script>
 	
 </html>
