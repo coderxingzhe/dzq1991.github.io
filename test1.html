@@ -14,15 +14,12 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
     <br/>
     <br/>
 	
-    <p style="text-align:center"> <button id="btn4" type = "button" onclick = "jsToOcFunction1()" > JS调用OC：不带参数  </button> </p>
-    <p style="text-align:center"> <button id="btn5" type = "button" onclick = "jsToOcFunction2()"> JS调用OC：带参数  </button> </p>
-    <p style="text-align:center"> <button id="btn3" type = "button" onclick = "showAlert()" > oc捕获到html的弹出框  </button> </p>
-	
-    <p style="text-align:center"> <button id="btn1" type = "button" onclick = "back2gameFunc()" > back2gameFunc  </button> </p>
-    <p style="text-align:center"> <button id="btn2" type = "button" onclick = "toastFunc()"> toastFunc  </button> </p>
-    <p style="text-align:center"> <button id="btn2" type = "button" onclick = "closeMenuFunc()"> closeMenuFunc  </button> </p>
-    <p style="text-align:center"> <button id="btn2" type = "button" onclick = "updateUserInfoFunc()"> updateUserInfoFunc  </button> </p>
-    <p style="text-align:center"> <button id="btn2" type = "button" onclick = "toastFunc()"> toastFunc  </button> </p>
+    
+    <p style="text-align:center"> <button id="btn1" type = "button" onclick = "back2game()" > back2game  </button> </p>
+    <p style="text-align:center"> <button id="btn2" type = "button" onclick = "toast()"> toast  </button> </p>
+    <p style="text-align:center"> <button id="btn2" type = "button" onclick = "closeMenu()"> closeMenu  </button> </p>
+    <p style="text-align:center"> <button id="btn2" type = "button" onclick = "updateUserInfo()"> updateUserInfo  </button> </p>
+    <p style="text-align:center"> <button id="btn2" type = "button" onclick = "copy()"> copy  </button> </p>
     <p style="text-align:center"> <button id="btn3" type = "button" onclick = "showAlert()" > oc捕获到html的弹出框  </button> </p>
     <button type="button" onclick = "back2gameFunc()" > back2game方法 </button>
     <button type="button" onclick = "updateUserInfoFunc()" > updateUserInfo方法 </button>
@@ -35,37 +32,27 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 <script  src="mobile-detect.js"></script>
 	
 <script type="text/javascript">
-    function jsToOcFunction1()  //jsToOcFunction1
-    {
-       alert("enter jsToOcFunction1");
-       window.webkit.messageHandlers.jsToOcNoPrams.postMessage({});
-    }
     
-    function jsToOcFunction2()
-    {
-	alert("enter jsToOcFunction2");
-        window.webkit.messageHandlers.jsToOcWithPrams.postMessage({"params":"我是参数"});
-    }
-    
-    function showAlert()
-    {
-        alert("被OC截获到了");
-    }
-	
 
-    function back2gameFunc() 
+    function back2game() 
     {
 	 alert("enter back2gameFunc");
 	 window.webkit.messageHandlers.back2game.postMessage({});
     }
 	
-    function toastFunc() 
+    function toast() 
     {
 	 alert("enter toastFunc");
 	 window.webkit.messageHandlers.toast.postMessage({});
     }
 	
-    function closeMenuFunc() 
+    function closeMenu() 
+    {
+	 alert("enter closeMenuFunc");
+	 window.webkit.messageHandlers.closeMenu.postMessage({});
+    }
+	
+    function copy() 
     {
 	 alert("enter closeMenuFunc");
 	 window.webkit.messageHandlers.closeMenu.postMessage({});
@@ -73,7 +60,7 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 	
 	
 
-    function updateUserInfoFunc()
+    function updateUserInfo()
     {
 	    
 	 alert("enter updateUserInfo");
