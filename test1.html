@@ -18,8 +18,11 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
     <p style="text-align:center"> <button id="btn5" type = "button" onclick = "jsToOcFunction2()"> JS调用OC：带参数  </button> </p>
     <p style="text-align:center"> <button id="btn3" type = "button" onclick = "showAlert()" > oc捕获到html的弹出框  </button> </p>
 	
-    <p style="text-align:center"> <button id="btn1" type = "button" onclick = "back2game1()" > 方法1  </button> </p>
-    <p style="text-align:center"> <button id="btn2" type = "button" onclick = "back2game2()"> 方法2  </button> </p>
+    <p style="text-align:center"> <button id="btn1" type = "button" onclick = "back2gameFunc()" > back2gameFunc  </button> </p>
+    <p style="text-align:center"> <button id="btn2" type = "button" onclick = "toastFunc()"> toastFunc  </button> </p>
+    <p style="text-align:center"> <button id="btn2" type = "button" onclick = "closeMenuFunc()"> closeMenuFunc  </button> </p>
+    <p style="text-align:center"> <button id="btn2" type = "button" onclick = "updateUserInfoFunc()"> updateUserInfoFunc  </button> </p>
+    <p style="text-align:center"> <button id="btn2" type = "button" onclick = "toastFunc()"> toastFunc  </button> </p>
     <p style="text-align:center"> <button id="btn3" type = "button" onclick = "showAlert()" > oc捕获到html的弹出框  </button> </p>
     <button type="button" onclick = "back2gameFunc()" > back2game方法 </button>
     <button type="button" onclick = "updateUserInfoFunc()" > updateUserInfo方法 </button>
@@ -50,25 +53,31 @@ content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
     }
 	
 
-    function back2game1() 
+    function back2gameFunc() 
     {
 	 alert("enter back2game1");
-	 window.webkit.messageHandlers.jsToOcNoPrams.postMessage({});
+	 window.webkit.messageHandlers.back2game.postMessage({});
     }
 	
-    function back2game2() 
+    function toastFunc() 
     {
 	 alert("enter back2game2");
-	 window.webkit.messageHandlers.updateUserInfo.postMessage({});
+	 window.webkit.messageHandlers.toast.postMessage({});
+    }
+	
+    function closeMenuFunc() 
+    {
+	 alert("enter back2game2");
+	 window.webkit.messageHandlers.closeMenu.postMessage({});
     }
 	
 	
 
-    function updateUserInfo()
+    function updateUserInfoFunc()
     {
 	    
 	 alert("enter updateUserInfo");
-         window.webkit.messageHandlers.jsToOcWithPrams.postMessage({"params":"我是参数"});
+         window.webkit.messageHandlers.updateUserInfo.postMessage({"params":"我是参数"});
     }
 
     
